@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Deactivation Form</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        form {
+            width: 40%;
+            margin-left: 30%;
+            margin-top: 5%;
+            text-align: center;
+            background-color: cornsilk;
+            border: 5px solid black;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px;
+            text-align: left;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button{
+            background-color: red;
+            width: 80%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }   
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-align: left;
+        }
+        .terms input {
+            width: auto;
+            margin: 0;
+        }    
+    </style>    
+    </head>    
+        <h1>Snapchat Deactivation  Form</h1>
+        <form action="">
+            <label for="UserName">UserName:</label>
+            <input type="text" id="UserName" name="UserName"><br>
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email"><br>
+            <label>Reason For Deactivation</label><br>
+            <select name="Reason">
+                <option value="">--Select Reason--</option>
+                <option value="privacy">Privacy Concerns</option>
+                <option value="addiction">Too much time on app</option>
+                <option value="others">Others</option>
+            </select><br>
+            <label  class="terms">
+            <input type="checkbox">
+            I agree to Snapchat's 
+            <a href="https://www.snapchat.com/terms" target="_blank">Terms</a> and 
+            <a href="https://www.snapchat.com/privacy" target="_blank">Privacy Policy</a>
+            </label>
+            <br>                
+            <input style="background-color: green;"  type="submit" value="Submit">
+            <button>
+                Deactivate
+            </button>
+        </form>
+    </body>    
+</html>

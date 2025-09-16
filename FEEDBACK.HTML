@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Product Feedback</title>
+<style>
+   body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 600px;
+    background-color: white;
+    padding: 30px 35px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+  }
+  form {
+    margin-top: 10px;
+  }
+  label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+    color: black;
+  }
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  textarea {
+    min-height: 90px;
+  }
+  .options-group {
+    margin-top: 8px;
+    display: flex;
+  }
+  .options-group label {
+    font-weight: normal;
+    margin-right: 12px;
+  }
+  input[type="radio"] {
+    margin-right: 6px;
+  }
+  button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }  
+</style>
+</head>
+<body>
+   <div class="container">
+   <h2>Product Purchase Feedback</h2>
+   <form action=" ">
+
+    <label for="customerName">Name:</label>
+    <input type="text" id="customerName" name="customerName" placeholder="Your full name" required />
+
+    <label for="email">Email (optional):</label>
+    <input type="email" id="email" name="email" placeholder="Your email address" />
+
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" name="productName" placeholder="Name of the product you purchased" required />
+
+    <label for="purchaseDate">Purchase Date:</label>
+    <input type="date" id="purchaseDate" name="purchaseDate" required /> 
+
+    <label>How satisfied are you with the product?</label>
+    <div class="options-group">
+    <input type="radio" id="satisfaction" name="satisfaction" required />
+    <label for="very satisfied">Very satisfied</label>  
+    </div> 
+    <div class="options-group">
+    <input type="radio" id="satisfaction" name="satisfaction" required />
+    <label for="satisfied">satisfied</label>  
+    </div> 
+    <div class="options-group">
+    <input type="radio" id="satisfaction" name="satisfaction" required />
+    <label for="Neutral">Neutral</label>  
+    </div>
+    <div class="options-group">
+    <input type="radio" id="satisfaction" name="satisfaction" required />
+    <label for="dissatisfied">Dissatisfied</label>  
+    </div>
+    <div class="options-group">
+    <input type="radio" id="satisfaction" name="satisfaction" required />
+    <label for="very dissatisfied">Very dissatisfied</label>  
+    </div> 
+    <label>How would you rate the store's service?</label>
+    <select name="storeService" required>
+      <option value="" disabled selected>Select rating</option>
+      <option value="excellent">Excellent</option>
+      <option value="good">Good</option>
+      <option value="fair">Fair</option>
+      <option value="poor">Poor</option>
+    </select>
+    <label>Did you find the product easily?</label> 
+      <div class="options-group">
+      <input type="radio" name="ProductEase" id="ProductEase" required />
+      <label for="Yes">Yes</label>
+    </div>
+    <div class="options-group">
+      <input type="radio" name="ProductEase" id="ProductEase" required />
+      <label for="No">No</label>
+    </div> 
+    <label for="improvements">Any suggestions or comments?</label>
+    <textarea id="improvements" name="improvements" placeholder="Your feedback here..."></textarea>
+
+    <button type="submit">Submit Feedback</button>   
+    </form>
+   </div>
+</body>
+</html>

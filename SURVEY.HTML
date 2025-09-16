@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Feedback Survey</title>
+<style>
+    body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+   } 
+   form {
+    margin-top: 10px;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px 35px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+   }
+   h2{
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+   }
+   label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+    color: black;
+   }
+    button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   .options-group {
+    margin-top: 8px;
+    display: flex;
+  }
+  .options-group label {
+    font-weight: normal;
+    margin-right: 15px;
+  }
+  input[type="radio"] {
+    margin-right: 6px;
+  }
+   textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    box-sizing: border-box;
+    min-height: 90px;
+   }
+</style>
+</head>
+<body>
+    <h2>Patient Feedback Survey</h2>
+    <form action="">
+    <label for="patientName">Patient Name:</label>
+    <input type="text" id="patientName" name="patientName" placeholder="Your full name" required />
+
+    <label for="email">Email (optional):</label>
+    <input type="email" id="email" name="email" placeholder="Your email address" />
+
+    <label for="visitDate">Date of Visit:</label>
+    <input type="date" id="visitDate" name="visitDate" required /> 
+    
+    <label>Rate your overall experience:</label>
+    <div class ="options-group">
+        <input type="radio" name="experience" id="experience" required />
+        <label for="excellent">Excellent</label>
+    </div>
+    <div class="options-group">   
+        <input type="radio" name="experience" id="experience" required />
+        <label for="good">Good</label>
+    </div>
+    <div class="options-group">  
+        <input type="radio" name="experience" id="experience" required />
+        <label for="Fair">Fair</label>
+    </div>
+    <div class="options-group">    
+        <input type="radio" name="experience" id="experience" required />
+        <label for="Poor">Poor</label>
+    </div>
+    <label>Was the staff courteous and helpful?</label>
+    <div class="options-group">
+      <input type="radio" name="staffcourtesy" id="staffcourtesy" required />
+      <label for="Yes">Yes</label>
+    </div>
+    <div class="options-group">
+      <input type="radio" name="staffcourtesy" id="staffcourtesy" required />
+      <label for="No">No</label>
+    </div>  
+    <label>How would you rate the cleanliness of the facility?</label>
+    <select name="cleanliness" required>
+      <option value="disabled selected">Select rating</option>
+      <option value="excellent">Excellent</option>
+      <option value="good">Good</option>
+      <option value="fair">Fair</option>
+      <option value="poor">Poor</option>
+    </select>
+    <label for="comments">Additional Comments or Suggestions:</label>
+    <textarea id="comments" name="comments" placeholder="Your feedback here..."></textarea>
+
+    <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>

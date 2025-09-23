@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px;
+    }
+    h1 {
+      color: darkblue;
+    }
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: lightcoral;
+      text-align: center;
+      line-height: 150px;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Events</h1>
+  <h2>Mouse Events</h2>
+  <div class="box" 
+       onmouseover="mouseOver(this)" 
+       onmouseout="mouseOut(this)" 
+       onclick="mouseClick(this)">
+       Hover / Click me
+  </div>
+  <p id="mouseResult" class="result"></p>
+  <h2>Form Events</h2>
+  <form onsubmit="return validateForm()">
+    <label>Enter your name: </label>
+    <input type="text" id="username" onfocus="focusInput(this)" onblur="blurInput(this)">
+    <button type="submit">Submit</button>
+  </form>
+  <p id="formResult" class="result"></p>
+  <h2>Key Events</h2>
+  <label>Type something: </label>
+  <input type="text" id="keyInput" onkeydown="keyDown(event)" onkeyup="keyUp(event)">
+  <p id="keyResult" class="result"></p>
+  <h2>Window Events</h2>
+  <p id="windowResult" class="result"></p>
+
+  <script>
+    function mouseOver(element) {
+      element.style.backgroundColor = "lightgreen";
+      document.getElementById("mouseResult").innerText = "Mouse is over the box!";
+    }
+    function mouseOut(element) {
+      element.style.backgroundColor = "lightcoral";
+      document.getElementById("mouseResult").innerText = "Mouse left the box.";
+    }
+    function mouseClick(element) {
+      element.style.backgroundColor = "lightblue";
+      document.getElementById("mouseResult").innerText = "Box clicked!";
+    }
+    function focusInput(input) {
+      input.style.backgroundColor = "lightyellow";
+    }
+    function blurInput(input) {
+      input.style.backgroundColor = "white";
+    }
+    function validateForm() {
+      let name = document.getElementById("username").value;
+      if (name.trim() === "") {
+        document.getElementById("formResult").innerText = "Name cannot be empty!";
+        return false; 
+      } else {
+        document.getElementById("formResult").innerText = "Form submitted successfully!";
+        return false; 
+      }
+    }
+    function keyDown(event) {
+      document.getElementById("keyResult").innerText = "Key pressed: " + event.key;
+    }
+    function keyUp(event) {
+      document.getElementById("keyResult").innerText = "Key released: " + event.key;
+    }
+    window.onload = function() {
+      document.getElementById("windowResult").innerText = "Page fully loaded (onload event)";
+    };
+
+    window.onresize = function() {
+      document.getElementById("windowResult").innerText = 
+        "Window resized to: " + window.innerWidth + " x " + window.innerHeight;
+    };
+  </script>
+
+</body>
+</html>

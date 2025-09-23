@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pricing</title>
+  <style>
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        background-color: white;
+        margin: 0px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .outer-card{
+        background-color: lavender;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        padding: 30px;
+        width: 700px;
+        height: 600px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    .pricing-container {
+      display: flex;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px black;
+      padding: 20px;
+      text-align: center;
+      width: 300px;
+      height: 500px;
+      margin-top: 50px;    
+    }
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      color: black;
+    }
+    .subtitle{
+        color: gray;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .price span {
+      font-size: 16px;
+      color: black;
+    }
+    .features {
+      margin: 20px 0;
+      text-align: left;
+    }
+    .features li {
+      margin: 10px 0;
+      color: black;
+    }
+    .button{
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: white;
+        font-weight: bold ;    
+    }
+    .blue {
+        background-color: rgb(46, 46, 130);
+    }
+    .orange {
+        background-color: rgb(250, 72, 7);
+    }
+  </style>
+</head>  
+<body>
+   <div class="outer-card">
+    <div class="pricing-container">
+        <div class="card">
+            <h2>Personal</h2>
+            <p class="subtitle">We Think Ahead</p>
+            <p class="price" style="color: rgb(46, 46, 130);">$29 <span>/ month</span></p>
+            <ul class="features">
+                <li>Mobile-Optimized</li>
+                <li>Free Custem Domain</li>
+                <li>Best Web Hosting</li>
+                <li>Outstanding Support Team</li>
+                <li>Our Happy Customers</li>
+            </ul>
+            <img src="PHOTOS\card1.png">
+            <div class="button blue">Read More</div>
+        </div>   
+        <div class="card">
+            <h2>Business</h2>
+            <p class="subtitle">Special Offer</p>
+            <p class="price" style="color: rgb(250, 72, 7);">$38 <span>/month</span> </p>
+            <ul class="features">
+                <li>Mobile-Optimized</li>
+                <li>Free Custom Domain</li>
+                <li>Best Web Hosting</li>
+                <li>Outstanding Support Team</li>
+                <li>Our Happy Customers</li>
+            </ul>
+            <img src="PHOTOS\card2.png">
+            <div class="button orange">Read More</div>    
+        </div>
+        <div class="card">
+            <h2>Enterprise</h2>
+            <p class="subtitle">Our Best Solution</p>
+            <p class="price" style="color: rgb(46, 46, 130);">$49 <span>/month</span></p>
+            <ul class="features">
+                <li>Mobile-Optimized</li>
+                <li>Free Custom Domain</li>
+                <li>Best Web Hosting</li>
+                <li>Outstanding Support Team</li>
+                <li>Our Happy Customers</li>
+            </ul>
+            <img src="PHOTOS\card3.png">
+            <div class="button blue">Read More</div>
+        </div>
+    </div> 
+   </div>        
+</body>
+</html>

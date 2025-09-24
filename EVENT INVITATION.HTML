@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitation</title>
+<style>
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.invitation-card{
+    background-color: #fff8dc;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 500px;
+    text-align:center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+.invitation-card h1{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ff69b4;
+}
+.invitation-card p{
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #333;
+}
+.event-details{
+    background: #ff69b4;
+    color: white;
+    padding: 15px;  
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.footer{
+    font-size: 0.9em;
+    color: #555;
+}
+.balloon{
+    width:40px;
+    height:60px ;
+    border-radius: 50%;
+    position: fixed;
+    animation: float 5s linear infinite;
+    opacity: 0.8;
+}
+@keyframes float {
+     0% { transform: translateY(100vh);}
+     100% { transform: translateY(-100px);}
+}
+
+.papers {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    top: 0;
+    animation: fall 3s linear infinite;
+    opacity: 0.8;
+}
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+</style>
+</head>
+<body>
+<div class="invitation-card">
+    <h1>🎉 You're Invited! 🎉</h1>
+    <p>Come celebrate my birthday with lots of fun, games, and cake!</p>
+
+    <div class="event-details">
+      <p><strong>Date:</strong> December 29, 2025</p>
+      <p><strong>Time:</strong> 7:00 PM - 10:00 PM</p>
+      <p><strong>Venue:</strong> Sunshine Party Hall, Downtown</p>
+    </div>
+
+    <div class="footer">
+       We are very excited to have you join us for this special occasion. 
+       We can't wait to see you there! 🎂
+    </div>
+</div>
+
+<script>
+const colors = ['#ff6666', '#66ccff', '#99ff66'];
+for(let i=0; i<30; i++){
+    const balloon = document.createElement('div');
+    balloon.className = 'balloon';
+    balloon.style.backgroundColor = colors[i % colors.length];
+    balloon.style.left = Math.random() * window.innerWidth + 'px';
+    balloon.style.animationDuration = (4 + Math.random()*3) + 's';
+    document.body.appendChild(balloon);
+}
+
+const papersColors = ['#ff0','#f0f','#0ff','#0f0','#f00'];
+for(let i=0; i<30; i++){
+    const papers = document.createElement('div');
+    papers.className = 'papers';
+    papers.style.backgroundColor = papersColors[i % papersColors.length];
+    papers.style.left = Math.random() * window.innerWidth + 'px';
+    papers.style.animationDuration = (2 + Math.random()*2) + 's';
+    document.body.appendChild(papers);
+}
+</script>
+</body>
+</html>
